@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Player\Player_Bullet_Move.cs" />
+     <Compile Include="Assets\Scripts\Player\Player_Bullet_Status.cs" />
+     <Compile Include="Assets\Scripts\Player\Player_Bullet_System.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Move.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
