@@ -36,7 +36,7 @@ public class Player_Move : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            Player.GetComponent<Player_Bullet_System>().N_Way(0.5f, 5f, 5, 20);
+            Player.GetComponent<Player_Bullet_System>().N_Way(0.5f, 5f, 1, 20);
         }
     }
     // Update is called once per frame
