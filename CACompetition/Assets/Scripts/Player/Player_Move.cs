@@ -8,6 +8,7 @@ Playerの入力を取るクラスです
 public class Player_Move : MonoBehaviour
 {
     private float speed;
+    private int b_number = 1;
 
     [SerializeField] private GameObject Player;
 
@@ -15,6 +16,7 @@ public class Player_Move : MonoBehaviour
     void Start()
     {
         speed = 0.2f;
+        Player.GetComponent<Player_Bullet_System>().Change_Wait(5);
     }
     void Key_Input()
     {
@@ -36,7 +38,12 @@ public class Player_Move : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            Player.GetComponent<Player_Bullet_System>().N_Way(0.5f, 5f, 1, 20);
+            Player.GetComponent<Player_Bullet_System>().N_Way(0.5f, 5f, b_number, 10);
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            b_number += 1;
+            if (b_number == 6) b_number = 1;
         }
     }
     // Update is called once per frame
