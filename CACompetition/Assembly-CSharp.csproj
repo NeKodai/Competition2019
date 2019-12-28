@@ -53,6 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemy\Enemy_Generate.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Enemy_Move.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Status.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Bullet_Status.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Bullet_System.cs" />

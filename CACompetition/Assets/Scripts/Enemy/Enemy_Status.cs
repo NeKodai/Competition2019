@@ -7,7 +7,7 @@ using UnityEngine;
 */
 public class Enemy_Status : MonoBehaviour
 {
-    private float hp = 100;
+    private float hp = 50;
     public void Damage(float damage)
     {
         hp -= damage;

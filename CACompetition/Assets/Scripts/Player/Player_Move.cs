@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-Playerの入力を取るクラスです
+Playerの入力を取るクラス
 */
 public class Player_Move : MonoBehaviour
 {
@@ -38,7 +38,7 @@ public class Player_Move : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            Player.GetComponent<Player_Bullet_System>().N_Way(0.5f, 5f, b_number, 10);
+            Player.GetComponent<Player_Bullet_System>().N_Way_Homing(0.3f, 5f, b_number, 20, 2, 0.05f);
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
