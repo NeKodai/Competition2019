@@ -13,8 +13,14 @@ public class Enemy_Status : MonoBehaviour
         hp -= damage;
         if (hp <= 0)
         {
+            StopAllCoroutines();
             Destroy(this.gameObject);
         }
+    }
+    void Init(float input_hp, int input_pattarn)
+    {
+        hp = input_hp;
+
     }
     // Start is called before the first frame update
     void Start()

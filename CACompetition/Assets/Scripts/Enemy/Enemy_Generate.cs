@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy_Generate : MonoBehaviour
 {
     private GameObject Enemy;
-    [SerializeField] GameObject Enemy_Field;
+    [SerializeField] GameObject Enemy_Field = null;
     public IEnumerator Generate()
     {
         while (true)

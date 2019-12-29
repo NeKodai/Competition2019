@@ -5,6 +5,23 @@ using UnityEngine;
 public class Enemy_Move : MonoBehaviour
 {
 
+    private IEnumerator Liner_System(float x_vector, float y_vector, int wait = -1)
+    {
+        while (true)
+        {
+            this.transform.Translate(x_vector, y_vector, 0);
+            if (this.gameObject.transform.position.x < -9.0f || this.gameObject.transform.position.y < -5.0f || this.gameObject.transform.position.y > 5.0f)
+            {
+                Destroy(this.gameObject);
+            }
+            yield return 1;
+        }
+    }
+    public void Liner(float x_vector, float y_vector, int wait = -1)
+    {
+        StartCoroutine(Liner_System(x_vector, y_vector, wait));
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +31,6 @@ public class Enemy_Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.transform.position.x < -11)
-        {
-            Destroy(this.gameObject);
-        }
-        this.transform.Translate(-0.05f, 0, 0);
+
     }
 }

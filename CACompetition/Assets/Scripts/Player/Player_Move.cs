@@ -10,7 +10,7 @@ public class Player_Move : MonoBehaviour
     private float speed;
     private int b_number = 1;
 
-    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject Player = null;
 
     // Start is called before the first frame update
     void Start()
@@ -38,12 +38,12 @@ public class Player_Move : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            Player.GetComponent<Player_Bullet_System>().N_Way_Homing(0.3f, 5f, b_number, 20, 2, 0.05f);
+            Player.GetComponent<Player_Bullet_System>().N_Way_Homing(0.3f, 5f, b_number, 40, 2, 0.05f);
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
             b_number += 1;
-            if (b_number == 6) b_number = 1;
+            if (b_number == 10) b_number = 1;
         }
     }
     // Update is called once per frame

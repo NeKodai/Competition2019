@@ -12,8 +12,8 @@ public class Player_Bullet_System : MonoBehaviour
     private int shot_wait = 0;
     private int wait_count = 0;
     private int temp = 0;
-    [SerializeField] private GameObject Player;
-    [SerializeField] private GameObject Enemy_Field;
+    [SerializeField] private GameObject Player = null;
+    [SerializeField] private GameObject Enemy_Field = null;
     public void Change_Wait(int wait)
     {
         shot_wait = wait;
@@ -30,7 +30,7 @@ public class Player_Bullet_System : MonoBehaviour
             {
                 float x_vector = (float)Math.Cos(-(half_rad) + (rad * i));
                 float y_vector = (float)Math.Sin(-(half_rad) + (rad * i));
-                GameObject new_obj = Instantiate(Bullet, new Vector3(Player.transform.position.x, Player.transform.position.y, 0), Quaternion.identity);
+                GameObject new_obj = Instantiate(Bullet, new Vector3(Player.transform.position.x + 0.6f, Player.transform.position.y, 0), Quaternion.identity);
                 new_obj.GetComponent<Player_Bullet_Status>().Init(x_vector * speed, y_vector * speed, 0, damage, range, penetrate);
             }
             wait_count = 0;
@@ -93,7 +93,7 @@ public class Player_Bullet_System : MonoBehaviour
             {
                 float x_vector = (float)Math.Cos(-(half_rad) + (rad * i));
                 float y_vector = (float)Math.Sin(-(half_rad) + (rad * i));
-                GameObject new_bullet = Instantiate(Bullet, new Vector3(Player.transform.position.x, Player.transform.position.y, 0), Quaternion.identity);
+                GameObject new_bullet = Instantiate(Bullet, new Vector3(Player.transform.position.x + 0.6f, Player.transform.position.y, 0), Quaternion.identity);
                 new_bullet.GetComponent<Player_Bullet_Status>().Init(x_vector * speed, y_vector * speed, 0, damage, range, penetrate);
                 StartCoroutine(Search_Target(new_bullet, delay, homing_delay, speed));
 
