@@ -9,13 +9,19 @@ public class Player_Move : MonoBehaviour
 {
     private float speed;
     private int b_number = 1;
+    private GameObject Player;
 
-    [SerializeField] private GameObject Player = null;
 
+    public float Speed
+    {
+        set { speed = value; }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.2f;
+        var Status = this.gameObject.GetComponent<Player_Status>();
+        Player = Status.Player_Get;
+        speed = Status.Speed;
         Player.GetComponent<Player_Bullet_System>().Change_Wait(5);
     }
     void Key_Input()

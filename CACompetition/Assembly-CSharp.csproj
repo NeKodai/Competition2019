@@ -53,27 +53,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Enemy\Enemy_Generate.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Enemy_Move.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Dragon\D_Attack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Dragon\D_Move.cs" />
+     <Compile Include="Assets\Scripts\Enemy\E_Bullet_Status.cs" />
+     <Compile Include="Assets\Scripts\Enemy\E_Circle01\EC01_Attack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\E_Circle01\EC01_Move.cs" />
+     <Compile Include="Assets\Scripts\Enemy\E_Liner01\EL01_Attack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\E_Liner01\EL01_Move.cs" />
+     <Compile Include="Assets\Scripts\Enemy\E_Liner01\EL01_Status.cs" />
+     <Compile Include="Assets\Scripts\Enemy\E_Shooter01\ES01_Attack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\E_Shooter01\ES01_Move.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Status.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Bullet_Status.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Bullet_System.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Move.cs" />
+     <Compile Include="Assets\Scripts\Player\Player_Status.cs" />
      <Compile Include="Assets\Scripts\Stages\Stage1.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/libra/Desktop/CACompetition/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/Users/libra/Desktop/CACompetition/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/Users/libra/Desktop/CACompetition/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/libra/Desktop/CACompetition/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/Users/libra/Desktop/CACompetition/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Users/libra/Desktop/unity/2018.4.6f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -280,13 +289,13 @@
  <HintPath>/Users/libra/Desktop/unity/2018.4.6f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/Users/libra/Desktop/CACompetition/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/Users/libra/Desktop/CACompetition/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/libra/workspace/github/Competition2019/CACompetition/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/Users/libra/Desktop/CACompetition/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Users/libra/Desktop/unity/2018.4.6f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
