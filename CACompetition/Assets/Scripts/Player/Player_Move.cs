@@ -22,7 +22,7 @@ public class Player_Move : MonoBehaviour
         var Status = this.gameObject.GetComponent<Player_Status>();
         Player = Status.Player_Get;
         speed = Status.Speed;
-        Player.GetComponent<Player_Bullet_System>().Change_Wait(5);
+        Player.GetComponent<Player_Bullet_System>().Shot_Wait = 5;
     }
     void Key_Input()
     {
@@ -45,6 +45,12 @@ public class Player_Move : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             Player.GetComponent<Player_Bullet_System>().N_Way_Homing(0.3f, 5f, b_number, 40, 2, 0.05f);
+            //Player.GetComponent<Player_Bullet_System>().N_Way(0.3f, 5f, b_number, 10);
+            Player.GetComponent<Player_Status>().Speed = 0.1f;
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Player.GetComponent<Player_Status>().Speed = 0.2f;
         }
         if (Input.GetKeyDown(KeyCode.M))
         {

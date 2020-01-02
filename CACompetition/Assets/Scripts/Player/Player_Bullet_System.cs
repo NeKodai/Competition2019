@@ -14,9 +14,10 @@ public class Player_Bullet_System : MonoBehaviour
     private int temp = 0;
     [SerializeField] private GameObject Player = null;
     [SerializeField] private GameObject Enemy_Field = null;
-    public void Change_Wait(int wait)
+    public int Shot_Wait
     {
-        shot_wait = wait;
+        set { shot_wait = value; }
+        get { return shot_wait; }
     }
     //通常弾
     public void N_Way(float speed, float damage, int n, float degree, int range = -1, int penetrate = 0)

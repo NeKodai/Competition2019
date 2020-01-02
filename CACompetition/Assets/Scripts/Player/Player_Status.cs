@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Status : MonoBehaviour
 {
     [SerializeField] private GameObject Player = null;
     [SerializeField] private float hp = 100;
     [SerializeField] private float speed = 0.2f;
+    [SerializeField] private GameObject Canvas = null;
     public GameObject Player_Get
     {
         get { return this.Player; }
@@ -28,6 +30,8 @@ public class Player_Status : MonoBehaviour
         set
         {
             hp = value;
+            GameObject Hp_obj = Canvas.transform.Find("Hp").gameObject;
+            Hp_obj.GetComponent<Text>().text = "HP" + hp.ToString();
         }
         get
         {

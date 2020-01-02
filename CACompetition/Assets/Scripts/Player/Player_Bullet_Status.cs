@@ -48,11 +48,14 @@ public class Player_Bullet_Status : MonoBehaviour
         {
             if (Target && this.gameObject)
             {
-                float distance_x = Target.transform.position.x - this.gameObject.transform.position.x;
-                float distance_y = Target.transform.position.y - this.gameObject.transform.position.y;
-                double rad = Math.Atan2(distance_y, distance_x);
-                x_vector = (float)Math.Cos(rad) * speed;
-                y_vector = (float)Math.Sin(rad) * speed;
+                if (Target.tag == "Enemy")
+                {
+                    float distance_x = Target.transform.position.x - this.gameObject.transform.position.x;
+                    float distance_y = Target.transform.position.y - this.gameObject.transform.position.y;
+                    double rad = Math.Atan2(distance_y, distance_x);
+                    x_vector = (float)Math.Cos(rad) * speed;
+                    y_vector = (float)Math.Sin(rad) * speed;
+                }
             }
             else
             {

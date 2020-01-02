@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy_Status : MonoBehaviour
 {
-    private float hp = 20;
+    [SerializeField] private float hp = 30;
+    private float max_hp = 0;
 
     public void Damage(float damage)
     {
@@ -14,10 +15,18 @@ public class Enemy_Status : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    public float Change_Hp
+    public float Hp
     {
-        set { hp = value; }
+        set
+        {
+            hp = value;
+            max_hp = hp;
+        }
         get { return this.hp; }
+    }
+    public float Max_Hp
+    {
+        get { return this.max_hp; }
     }
     // Start is called before the first frame update
     void Start()

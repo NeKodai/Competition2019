@@ -67,7 +67,6 @@ public class Stage1 : MonoBehaviour
 
                 break;
             case 10:
-
                 Function_Liner(5, 2, 4, -0.05f, 0);
                 break;
             case 100:
@@ -77,10 +76,22 @@ public class Stage1 : MonoBehaviour
                 position_y = UnityEngine.Random.Range(-5f, 5f);
                 StartCoroutine(Coroutine_Liner(0, 5, 1f, position_y, -0.05f, 0));
                 break;
-            case 450:
+            case 400:
                 position_y = UnityEngine.Random.Range(-5f, 5f);
-                StartCoroutine(Coroutine_Liner(1, 3, 4f, position_y, -0.03f, 0));
+                StartCoroutine(Coroutine_Liner(0, 5, 1f, position_y, -0.05f, 0));
                 break;
+            case 650:
+                Function_Liner(5, 2, -2, -0.05f, 0);
+                Function_Liner(5, 2, 0, -0.05f, 0);
+                Function_Liner(5, 2, 2, -0.05f, 0);
+                position_y = UnityEngine.Random.Range(-5f, 5f);
+                StartCoroutine(Coroutine_Liner(1, 3, 2.5f, position_y, -0.03f, 0));
+                break;
+            case 1500:
+                new_obj = Instantiate((GameObject)Resources.Load("Dragon"), new Vector3(12, 0, 0), Quaternion.identity, Enemy_Field.transform);
+                new_obj.GetComponent<Enemy_Status>().Hp = 6000;
+                break;
+
         }
         flame_count += 1;
     }

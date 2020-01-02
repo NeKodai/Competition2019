@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Camera\Camera_Move.cs" />
      <Compile Include="Assets\Scripts\Enemy\Dragon\D_Attack.cs" />
      <Compile Include="Assets\Scripts\Enemy\Dragon\D_Move.cs" />
      <Compile Include="Assets\Scripts\Enemy\E_Bullet_Status.cs" />
